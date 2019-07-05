@@ -18,7 +18,7 @@ const cmd = (
   repo
 , target
 , reference
-) => `git clone ${repo} ${target} && cd ${target} && git checkout ${reference}`;
+) => `git fetch --all && git clone ${repo} ${target} && cd ${target} && git checkout ${reference}`;
 
 
 const gitClone = (
